@@ -5,30 +5,39 @@ const projects = [
     image: "./sea_level_plot.png",
     link: "https://freecodecam-boilerplate-7xy4fyc2vvu.ws-eu111.gitpod.io/",
     alt: "Graph showing sea level rise over time",
+    description:
+      "A data visualization project analyzing sea level trends using Python and Matplotlib.",
   },
   {
     title: "Time Series Visualizer",
     image: "./bar_plot.png",
     link: "https://freecodecam-boilerplate-yjjzplwmhsz.ws-eu111.gitpod.io/",
     alt: "Time series data visualization",
+    description:
+      "A project visualizing time series data using Python and Seaborn.",
   },
   {
     title: "Medical Data Visualizer",
     image: "./catplot.png",
     link: "https://freecodecam-boilerplate-5dqrp8vqgfx.ws-eu111.gitpod.io/",
     alt: "Medical data visualization",
+    description:
+      "A project analyzing and visualizing medical data using Python and Pandas.",
   },
   {
     title: "Technical Doc Page",
     image: "./Screenshot 2024-05-01 052406.png",
     link: "https://tumelobasi.github.io/Technical-Documentation-Page/",
     alt: "Technical documentation page",
+    description:
+      "A responsive technical documentation page built with HTML and CSS.",
   },
   {
     title: "Survey Form",
     image: "./Screenshot 2024-05-01 052406.png",
     link: "https://tumelobasi.github.io/Survey-Form/",
     alt: "Survey form project",
+    description: "A responsive survey form built with HTML and CSS.",
   },
 ];
 
@@ -52,8 +61,13 @@ function renderProjects() {
     titleElement.className = "project-title";
     titleElement.innerHTML = `<span class="code">&lt;</span> ${project.title} <span class="code">&gt;</span>`;
 
+    const descriptionElement = document.createElement("p");
+    descriptionElement.className = "project-description";
+    descriptionElement.textContent = project.description;
+
     projectElement.appendChild(imageElement);
     projectElement.appendChild(titleElement);
+    projectElement.appendChild(descriptionElement);
 
     projectsGrid.appendChild(projectElement);
   });
@@ -88,4 +102,15 @@ window.addEventListener("scroll", () => {
 
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Dark/Light Mode Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("light-mode");
+  themeToggle.textContent = body.classList.contains("light-mode")
+    ? "Dark Mode"
+    : "Light Mode";
 });

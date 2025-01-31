@@ -14,6 +14,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <!-- Google Analytics (Replace with your own tracking ID) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YOUR_TRACKING_ID");
+    </script>
   </head>
   <body>
     <!-- Navigation -->
@@ -22,9 +37,11 @@
         <ul class="nav-list">
           <li><a href="#welcome-section">Welcome</a></li>
           <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="btn">Toggle Theme</button>
       </nav>
     </header>
 
@@ -32,7 +49,10 @@
     <section id="welcome-section" class="welcome-section">
       <h1>Hi, I am Tumelo Maphalla</h1>
       <h3>Welcome to My Portfolio</h3>
-      <a href="#contact" class="btn">Let's Work Together</a>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
     </section>
 
     <!-- About Me Section -->
@@ -73,6 +93,20 @@
           quality software, and maintaining efficient communication to ensure
           smooth project completion.
         </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <h2>My Skills</h2>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Data Visualization</span>
+        <span>JIRA</span>
+        <span>Agile Methodologies</span>
       </div>
     </section>
 
@@ -123,17 +157,17 @@
           <i class="fas fa-mobile-alt"></i> Call Me
         </a>
       </div>
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>**This is my personal portfolio that contains my coding projects.</p>
-      <p>
-        © Created for
-        <a href="#" target="_blank"
-          >freecodecamp <i class="fab fa-free-code-camp"></i
-        ></a>
-      </p>
+      <p>© Created by Tumelo Maphalla</p>
       <div class="social-icons">
         <a
           href="https://linkedin.com/in/yourprofile"

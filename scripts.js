@@ -2,7 +2,7 @@
 const projects = [
   {
     title: "Sea Level Predictor",
-    image: "./sea_level_plot.png",
+    image: "./projectImages/sea_level_plot.png",
     link: "https://freecodecam-boilerplate-7xy4fyc2vvu.ws-eu111.gitpod.io/",
     alt: "Graph showing sea level rise over time",
     description:
@@ -10,7 +10,7 @@ const projects = [
   },
   {
     title: "Time Series Visualizer",
-    image: "./bar_plot.png",
+    image: "./projectImages/bar_plot.png",
     link: "https://freecodecam-boilerplate-yjjzplwmhsz.ws-eu111.gitpod.io/",
     alt: "Time series data visualization",
     description:
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     title: "Medical Data Visualizer",
-    image: "./catplot.png",
+    image: "./projectImages/catplot.png",
     link: "https://freecodecam-boilerplate-5dqrp8vqgfx.ws-eu111.gitpod.io/",
     alt: "Medical data visualization",
     description:
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     title: "Technical Doc Page",
-    image: "./Screenshot 2024-05-01 052406.png",
+    image: "./projectImages/Screenshot 2024-05-01 052406.png",
     link: "https://tumelobasi.github.io/Technical-Documentation-Page/",
     alt: "Technical documentation page",
     description:
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     title: "Survey Form",
-    image: "./Screenshot 2024-05-01 052406.png",
+    image: "./projectImages/Screenshot 2024-05-01 052406.png",
     link: "https://tumelobasi.github.io/Survey-Form/",
     alt: "Survey form project",
     description: "A responsive survey form built with HTML and CSS.",

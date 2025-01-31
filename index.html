@@ -3,8 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tumelo Maphalla's Portfolio - Software Tester and Computer Science Graduate."
+    />
+    <meta
+      name="keywords"
+      content="Software Tester, Portfolio, Computer Science, ISTQB Certified"
+    />
+    <meta name="author" content="Tumelo Maphalla" />
     <title>Tumelo Maphalla - Portfolio</title>
-    <!-- CSS Imports -->
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Poppins:wght@200;300;400&display=swap"
@@ -14,178 +22,192 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./favicon.png" />
   </head>
   <body>
-    <!-- Navigation -->
     <header>
       <nav id="navbar" class="nav">
         <ul class="nav-list">
-          <li><a href="#welcome-section">Welcome</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#cv">CV</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#welcome-section" aria-label="Welcome Section">Welcome</a>
+          </li>
+          <li><a href="#about" aria-label="About Me Section">About Me</a></li>
+          <li><a href="#skills" aria-label="Skills Section">Skills</a></li>
+          <li>
+            <a href="#projects" aria-label="Projects Section">Projects</a>
+          </li>
+          <li>
+            <a href="#experience" aria-label="Experience Section">Experience</a>
+          </li>
+          <li>
+            <a href="#certificates" aria-label="Certificates Section"
+              >Certificates</a
+            >
+          </li>
+          <li><a href="#cv" aria-label="CV Section">CV</a></li>
+          <li><a href="#contact" aria-label="Contact Section">Contact</a></li>
         </ul>
-        <button id="theme-toggle" class="btn">Toggle Theme</button>
+        <button id="theme-toggle" class="btn" aria-label="Toggle Theme">
+          Toggle Theme
+        </button>
       </nav>
     </header>
 
-    <!-- Welcome Section -->
-    <section id="welcome-section" class="welcome-section">
-      <h1>Hi, I am Tumelo Maphalla</h1>
-      <h3>Welcome to My Portfolio</h3>
-      <div class="cta-buttons">
-        <a href="#projects" class="btn">View My Work</a>
-        <a href="#contact" class="btn">Contact Me</a>
-      </div>
-    </section>
+    <main>
+      <section id="welcome-section" class="welcome-section">
+        <h1>Hi, I am Tumelo Maphalla</h1>
+        <h3>Welcome to My Portfolio</h3>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn" aria-label="View My Work"
+            >View My Work</a
+          >
+          <a href="#contact" class="btn" aria-label="Contact Me">Contact Me</a>
+        </div>
+      </section>
 
-    <!-- Profile Picture and Logo -->
-    <section id="profile" class="profile-section">
-      <div class="profile-container">
-        <img
-          src="./profile-picture.jpg"
-          alt="Tumelo Maphalla"
-          class="profile-picture"
-        />
-        <img src="./logo.png" alt="Logo" class="logo" />
-      </div>
-    </section>
+      <section id="profile" class="profile-section">
+        <div class="profile-container">
+          <img
+            src="./profile-picture.jpg"
+            alt="Tumelo Maphalla"
+            class="profile-picture"
+            loading="lazy"
+          />
+          <img src="./logo.png" alt="Logo" class="logo" loading="lazy" />
+        </div>
+      </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="about-section">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <p>
-          🎯 <strong>Driven Software Tester</strong> | Computer Science &
-          Statistics Graduate | ISTQB Certified
-        </p>
-        <p>
-          As a passionate Software Tester intern with a foundation in Computer
-          Science and Statistics, I thrive on ensuring that software systems are
-          robust, reliable, and user-friendly. With an ISTQB Foundation
-          certification, I am equipped with proven techniques to identify and
-          resolve potential defects, contributing to seamless user experiences.
-        </p>
-        <p>💡 <strong>Core Strengths:</strong></p>
-        <ul>
-          <li>
-            Crafting and executing comprehensive test cases for functional,
-            regression, and exploratory testing
-          </li>
-          <li>
-            Leveraging data-driven insights from my statistics background to
-            optimise testing strategies
-          </li>
-          <li>
-            Adept in defect tracking tools such as JIRA and agile testing
-            methodologies
-          </li>
-          <li>
-            Strong problem-solving skills with a knack for finding edge cases
-          </li>
-        </ul>
-        <p>
-          I take pride in collaborating with cross-functional teams, delivering
-          quality software, and maintaining efficient communication to ensure
-          smooth project completion.
-        </p>
-      </div>
-    </section>
+      <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <p>
+            🎯 <strong>Driven Software Tester</strong> | Computer Science &
+            Statistics Graduate | ISTQB Certified
+          </p>
+          <p>
+            As a passionate Software Tester intern with a foundation in Computer
+            Science and Statistics, I thrive on ensuring that software systems
+            are robust, reliable, and user-friendly. With an ISTQB Foundation
+            certification, I am equipped with proven techniques to identify and
+            resolve potential defects, contributing to seamless user
+            experiences.
+          </p>
+          <p>💡 <strong>Core Strengths:</strong></p>
+          <ul>
+            <li>
+              Crafting and executing comprehensive test cases for functional,
+              regression, and exploratory testing
+            </li>
+            <li>
+              Leveraging data-driven insights from my statistics background to
+              optimise testing strategies
+            </li>
+            <li>
+              Adept in defect tracking tools such as JIRA and agile testing
+              methodologies
+            </li>
+            <li>
+              Strong problem-solving skills with a knack for finding edge cases
+            </li>
+          </ul>
+          <p>
+            I take pride in collaborating with cross-functional teams,
+            delivering quality software, and maintaining efficient communication
+            to ensure smooth project completion.
+          </p>
+        </div>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <h2>My Skills</h2>
-      <div class="skills-list" id="skills-list">
-        <!-- Skills will be dynamically inserted here by JavaScript -->
-      </div>
-    </section>
+      <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-list" id="skills-list"></div>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <h2 class="projects-section-header">Here are some of my Projects</h2>
-      <div class="projects-grid" id="projects-grid">
-        <!-- Projects will be dynamically inserted here by JavaScript -->
-      </div>
-    </section>
+      <section id="projects" class="projects-section">
+        <h2 class="projects-section-header">Here are some of my Projects</h2>
+        <div class="projects-grid" id="projects-grid"></div>
+      </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-      <h2>My Experience</h2>
-      <div class="experience-container" id="experience-container">
-        <!-- Experience will be dynamically inserted here by JavaScript -->
-      </div>
-    </section>
+      <section id="experience" class="experience-section">
+        <h2>My Experience</h2>
+        <div class="experience-container" id="experience-container"></div>
+      </section>
 
-    <!-- Certificates Section -->
-    <section id="certificates" class="certificates-section">
-      <h2>My Certificates</h2>
-      <div class="certificates-grid" id="certificates-grid">
-        <!-- Certificates will be dynamically inserted here by JavaScript -->
-      </div>
-    </section>
+      <section id="certificates" class="certificates-section">
+        <h2>My Certificates</h2>
+        <div class="certificates-grid" id="certificates-grid"></div>
+      </section>
 
-    <!-- CV Section -->
-    <section id="cv" class="cv-section">
-      <h2>My CV</h2>
-      <div class="cv-download">
-        <a href="./cv.pdf" download class="btn">Please have a look at my CV</a>
-      </div>
-    </section>
+      <section id="cv" class="cv-section">
+        <h2>My CV</h2>
+        <div class="cv-download">
+          <a href="./cv.pdf" download class="btn" aria-label="Download My CV"
+            >Download My CV</a
+          >
+        </div>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <div class="contact-section-header">
-        <h2>Let's work together...</h2>
-        <p>Here are my contact details</p>
-      </div>
-      <div class="contact-links">
-        <a
-          href="https://facebook.com/tumelo.basi.9"
-          target="_blank"
-          class="btn contact-details"
-          aria-label="Facebook"
-        >
-          <i class="fab fa-facebook-square"></i> Facebook
-        </a>
-        <a
-          id="profile-link"
-          href="https://github.com/tumelobasi"
-          target="_blank"
-          class="btn contact-details"
-          aria-label="GitHub"
-        >
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a
-          href="mailto:tumelobasi@gmail.com"
-          class="btn contact-details"
-          aria-label="Email"
-        >
-          <i class="fas fa-at"></i> Send a Mail
-        </a>
-        <a
-          href="tel:+27788493610"
-          class="btn contact-details"
-          aria-label="Call Me"
-        >
-          <i class="fas fa-mobile-alt"></i> Call Me
-        </a>
-      </div>
-      <form id="contact-form" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
+      <section id="contact" class="contact-section">
+        <div class="contact-section-header">
+          <h2>Let's work together...</h2>
+          <p>Here are my contact details</p>
+        </div>
+        <div class="contact-links">
+          <a
+            href="https://facebook.com/tumelo.basi.9"
+            target="_blank"
+            class="btn contact-details"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook-square"></i> Facebook</a
+          >
+          <a
+            href="https://github.com/tumelobasi"
+            target="_blank"
+            class="btn contact-details"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a
+            href="mailto:tumelobasi@gmail.com"
+            class="btn contact-details"
+            aria-label="Email"
+            ><i class="fas fa-at"></i> Email</a
+          >
+          <a
+            href="tel:+27788493610"
+            class="btn contact-details"
+            aria-label="Call Me"
+            ><i class="fas fa-mobile-alt"></i> Call Me</a
+          >
+        </div>
+        <form id="contact-form" class="contact-form">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            aria-label="Your Name"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            aria-label="Your Email"
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+            aria-label="Your Message"
+          ></textarea>
+          <button type="submit" class="btn" aria-label="Send Message">
+            Send Message
+          </button>
+        </form>
+      </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
       <p>© Created by Tumelo Maphalla</p>
       <div class="social-icons">
@@ -193,25 +215,20 @@
           href="https://linkedin.com/in/yourprofile"
           target="_blank"
           aria-label="LinkedIn"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
+          ><i class="fab fa-linkedin"></i
+        ></a>
         <a
           href="https://twitter.com/yourprofile"
           target="_blank"
           aria-label="Twitter"
-        >
-          <i class="fab fa-twitter"></i>
-        </a>
+          ><i class="fab fa-twitter"></i
+        ></a>
       </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Go to top">
+    <button id="back-to-top" title="Go to top" aria-label="Back to Top">
       <i class="fas fa-arrow-up"></i>
     </button>
-
-    <!-- JavaScript -->
     <script src="scripts.js"></script>
   </body>
 </html>

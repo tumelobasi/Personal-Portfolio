@@ -1,3 +1,4 @@
+// Arrays for dynamic content
 // Array of projects
 const projects = [
   {
@@ -41,7 +42,6 @@ const projects = [
   },
 ];
 
-// Array of skills
 const skills = [
   "HTML",
   "CSS",
@@ -116,15 +116,15 @@ const certificates = [
   },
 ];
 
-// Function to render projects
+// Render Projects
 function renderProjects() {
   const projectsGrid = document.getElementById("projects-grid");
-
   projects.forEach((project) => {
     const projectElement = document.createElement("a");
     projectElement.href = project.link;
     projectElement.target = "_blank";
     projectElement.className = "project";
+    projectElement.setAttribute("aria-label", project.title);
 
     const imageElement = document.createElement("img");
     imageElement.src = project.image;
@@ -143,28 +143,13 @@ function renderProjects() {
     projectElement.appendChild(imageElement);
     projectElement.appendChild(titleElement);
     projectElement.appendChild(descriptionElement);
-
     projectsGrid.appendChild(projectElement);
   });
-
-  // Add "See More" button
-  const seeMoreButton = document.createElement("a");
-  seeMoreButton.href = "https://www.freecodecamp.org/tumelobasi";
-  seeMoreButton.target = "_blank";
-  seeMoreButton.className = "btn btn-show-all";
-
-  const seeMoreText = document.createElement("p");
-  seeMoreText.className = "project-title";
-  seeMoreText.innerHTML = `See more <i class="fas fa-chevron-right"></i>`;
-
-  seeMoreButton.appendChild(seeMoreText);
-  projectsGrid.appendChild(seeMoreButton);
 }
 
-// Function to render skills
+// Render Skills
 function renderSkills() {
   const skillsList = document.getElementById("skills-list");
-
   skills.forEach((skill) => {
     const skillElement = document.createElement("span");
     skillElement.textContent = skill;
@@ -172,10 +157,9 @@ function renderSkills() {
   });
 }
 
-// Function to render experiences
+// Render Experiences
 function renderExperiences() {
   const experienceContainer = document.getElementById("experience-container");
-
   experiences.forEach((experience) => {
     const experienceItem = document.createElement("div");
     experienceItem.className = "experience-item";
@@ -183,6 +167,10 @@ function renderExperiences() {
     const toggleButton = document.createElement("button");
     toggleButton.className = "experience-toggle-btn";
     toggleButton.textContent = experience.title;
+    toggleButton.setAttribute(
+      "aria-label",
+      `Toggle ${experience.title} details`
+    );
 
     const details = document.createElement("div");
     details.className = "experience-details";
@@ -217,14 +205,21 @@ function renderExperiences() {
     experienceContainer.appendChild(experienceItem);
   });
 
-  // Set up toggle functionality for experience details
-  setupExperienceToggle();
+  // Toggle functionality
+  document.querySelectorAll(".experience-toggle-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const details = button.nextElementSibling;
+      details.classList.toggle("show");
+      button.textContent = details.classList.contains("show")
+        ? "Hide Details"
+        : "Show Details";
+    });
+  });
 }
 
-// Function to render certificates (PDF format)
+// Render Certificates
 function renderCertificates() {
   const certificatesGrid = document.getElementById("certificates-grid");
-
   certificates.forEach((certificate) => {
     const certificateElement = document.createElement("div");
     certificateElement.className = "certificate";
@@ -233,11 +228,12 @@ function renderCertificates() {
     linkElement.href = certificate.file;
     linkElement.target = "_blank";
     linkElement.className = "certificate-link";
+    linkElement.setAttribute("aria-label", certificate.title);
 
     const iconElement = document.createElement("i");
     iconElement.className = "fas fa-file-pdf";
     iconElement.style.fontSize = "5rem";
-    iconElement.style.color = "#e63946"; // Red color for PDF icon
+    iconElement.style.color = "#e63946";
 
     const titleElement = document.createElement("p");
     titleElement.textContent = certificate.title;
@@ -249,62 +245,31 @@ function renderCertificates() {
   });
 }
 
-// Function to set up experience toggle
-function setupExperienceToggle() {
-  const toggleButtons = document.querySelectorAll(".experience-toggle-btn");
-
-  toggleButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const details = button.nextElementSibling;
-      details.classList.toggle("show");
-
-      // Change button text based on visibility
-      if (details.classList.contains("show")) {
-        button.textContent = button.textContent.replace("Show", "Hide");
-      } else {
-        button.textContent = button.textContent.replace("Hide", "Show");
-      }
-    });
-  });
-}
-
 // Back to Top Button
 function setupBackToTop() {
   const backToTopButton = document.getElementById("back-to-top");
-
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopButton.style.display = "block";
-    } else {
-      backToTopButton.style.display = "none";
-    }
+    backToTopButton.style.display = window.scrollY > 300 ? "block" : "none";
   });
-
   backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
-// Dark/Light Mode Toggle
+// Theme Toggle
 function setupThemeToggle() {
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
-
-  // Check for saved theme in localStorage
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     body.classList.add(savedTheme);
     themeToggle.textContent =
       savedTheme === "dark-mode" ? "Light Mode" : "Dark Mode";
   }
-
-  // Toggle theme on button click
   themeToggle.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
     const isDarkMode = body.classList.contains("dark-mode");
-    themeToggle.textContent = isDarkMode ? "Light Text" : "Dark Text";
-
-    // Save theme preference to localStorage
+    themeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
     localStorage.setItem("theme", isDarkMode ? "dark-mode" : "light-mode");
   });
 }

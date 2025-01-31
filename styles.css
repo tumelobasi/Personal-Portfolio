@@ -1,13 +1,11 @@
 :root {
-  --primary-color: #1a73e8;
-  --secondary-color: #34a853;
-  --accent-color: #fbbc05;
-  --background-light: #ffffff;
-  --background-dark: #202124;
-  --text-light: #333333;
-  --text-dark: #e8eaed;
-  --gradient-primary: linear-gradient(45deg, #1a73e8, #34a853);
-  --gradient-secondary: linear-gradient(45deg, #fbbc05, #ff6f61);
+  --primary-color: #2c3e50; /* Dark blue */
+  --secondary-color: #34495e; /* Slightly lighter blue */
+  --accent-color: #3498db; /* Bright blue */
+  --background-light: #ffffff; /* White */
+  --background-dark: #1a1a1a; /* Dark gray */
+  --text-light: #333333; /* Dark gray */
+  --text-dark: #ffffff; /* White */
 }
 
 html {
@@ -107,17 +105,8 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: var(--gradient-primary);
-  animation: fadeIn 2s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  background: var(--primary-color);
+  color: var(--background-light);
 }
 
 .welcome-section .btn {
@@ -131,7 +120,7 @@ img {
 }
 
 .welcome-section .btn:hover {
-  background: #e6a704;
+  background: #2980b9; /* Slightly darker blue */
 }
 
 .profile-section {
@@ -179,7 +168,8 @@ img {
 
 .skills-section {
   padding: 10rem 2rem;
-  background: var(--gradient-secondary);
+  background: var(--secondary-color);
+  color: var(--background-light);
   text-align: center;
 }
 
@@ -194,7 +184,7 @@ img {
 
 .skills-list span {
   padding: 1rem 2rem;
-  background: var(--primary-color);
+  background: var(--accent-color);
   border-radius: 5px;
   font-size: 1.8rem;
   color: var(--background-light);
@@ -202,7 +192,8 @@ img {
 
 .projects-section {
   padding: 10rem 2rem;
-  background: var(--gradient-primary);
+  background: var(--primary-color);
+  color: var(--background-light);
   text-align: center;
 }
 
@@ -266,7 +257,7 @@ img {
 }
 
 .experience-toggle-btn:hover {
-  background: #1557b3;
+  background: #2c3e50; /* Slightly darker blue */
 }
 
 .experience-details {
@@ -285,7 +276,8 @@ img {
 
 .certificates-section {
   padding: 10rem 2rem;
-  background: var(--gradient-primary);
+  background: var(--secondary-color);
+  color: var(--background-light);
   text-align: center;
 }
 
@@ -320,7 +312,7 @@ img {
 
 .certificate-link i {
   font-size: 5rem;
-  color: #e63946; /* Red color for PDF icon */
+  color: var(--accent-color);
 }
 
 .certificate-link p {
@@ -330,7 +322,8 @@ img {
 
 .cv-section {
   padding: 10rem 2rem;
-  background: var(--gradient-secondary);
+  background: var(--primary-color);
+  color: var(--background-light);
   text-align: center;
 }
 
@@ -344,7 +337,7 @@ img {
 }
 
 .cv-download .btn:hover {
-  background: #e6a704;
+  background: #2980b9; /* Slightly darker blue */
 }
 
 .contact-section {
@@ -355,18 +348,17 @@ img {
   text-align: center;
   height: 80vh;
   padding: 0 2rem;
-  background: var(--gradient-secondary);
+  background: var(--secondary-color);
+  color: var(--background-light);
 }
 
 .contact-section-header > h2 {
   font-size: 4rem;
-  color: var(--background-light);
 }
 
 .contact-section-header > p {
   font-style: italic;
   font-size: 3rem;
-  color: var(--background-light);
 }
 
 .contact-links {
@@ -382,7 +374,6 @@ img {
   font-size: 2.4rem;
   text-shadow: 1px 1px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
-  color: var(--background-light);
 }
 
 .contact-details:hover {
@@ -468,7 +459,7 @@ footer > p {
 }
 
 #back-to-top:hover {
-  background: #e6a704;
+  background: #2980b9; /* Slightly darker blue */
 }
 
 @media (max-width: 75em) {

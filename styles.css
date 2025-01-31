@@ -205,6 +205,52 @@ img {
   padding: 2rem 0.5rem;
 }
 
+.experience-section {
+  padding: 10rem 2rem;
+  background: var(--main-gray);
+  text-align: center;
+}
+
+.experience-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.experience-item {
+  margin-bottom: 2rem;
+}
+
+.experience-toggle-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: left;
+  background: var(--main-blue);
+  color: var(--main-white);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-out;
+}
+
+.experience-toggle-btn:hover {
+  background: var(--main-red);
+}
+
+.experience-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  padding: 0 1rem;
+  background: var(--main-gray);
+  border-left: 4px solid var(--main-red);
+}
+
+.experience-details.show {
+  max-height: 1000px; /* Adjust based on content size */
+  padding: 1rem;
+}
+
 .contact-section {
   display: flex;
   flex-direction: column;

@@ -86,31 +86,59 @@ function renderProjects() {
   projectsGrid.appendChild(seeMoreButton);
 }
 
-// Render projects when the page loads
-document.addEventListener("DOMContentLoaded", renderProjects);
+// Toggle Experience Details
+function setupExperienceToggle() {
+  const toggleButtons = document.querySelectorAll(".experience-toggle-btn");
+
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const details = button.nextElementSibling;
+      details.classList.toggle("show");
+
+      // Change button text based on visibility
+      if (details.classList.contains("show")) {
+        button.textContent = button.textContent.replace("Show", "Hide");
+      } else {
+        button.textContent = button.textContent.replace("Hide", "Show");
+      }
+    });
+  });
+}
 
 // Back to Top Button
-const backToTopButton = document.getElementById("back-to-top");
+function setupBackToTop() {
+  const backToTopButton = document.getElementById("back-to-top");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-});
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
 
-backToTopButton.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 // Dark/Light Mode Toggle
-const themeToggle = document.getElementById("theme-toggle");
-const body = document.body;
+function setupThemeToggle() {
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
 
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("light-mode");
-  themeToggle.textContent = body.classList.contains("light-mode")
-    ? "Dark Mode"
-    : "Light Mode";
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
+    themeToggle.textContent = body.classList.contains("light-mode")
+      ? "Dark Mode"
+      : "Light Mode";
+  });
+}
+
+// Initialize all functionality
+document.addEventListener("DOMContentLoaded", () => {
+  renderProjects();
+  setupExperienceToggle();
+  setupBackToTop();
+  setupThemeToggle();
 });

@@ -100,6 +100,22 @@ const experiences = [
   },
 ];
 
+// Array of certificates (PDF format)
+const certificates = [
+  {
+    file: "./Certificates/Tumelo Maphalla  VB Scripting.pdf",
+    title: "VB Scripting for Testers",
+  },
+  {
+    file: "./Certificates/Tumelo Maphalla JAVA for Testers.pdf",
+    title: "JAVA for Testers",
+  },
+  {
+    file: "./Certificates/JIRA Test Management using ZEPHYR for TESTERS Certificate.pdf",
+    title: "JIRA Test Management using ZEPHYR for TESTERS",
+  },
+];
+
 // Function to render projects
 function renderProjects() {
   const projectsGrid = document.getElementById("projects-grid");
@@ -205,6 +221,34 @@ function renderExperiences() {
   setupExperienceToggle();
 }
 
+// Function to render certificates (PDF format)
+function renderCertificates() {
+  const certificatesGrid = document.getElementById("certificates-grid");
+
+  certificates.forEach((certificate) => {
+    const certificateElement = document.createElement("div");
+    certificateElement.className = "certificate";
+
+    const linkElement = document.createElement("a");
+    linkElement.href = certificate.file;
+    linkElement.target = "_blank";
+    linkElement.className = "certificate-link";
+
+    const iconElement = document.createElement("i");
+    iconElement.className = "fas fa-file-pdf";
+    iconElement.style.fontSize = "5rem";
+    iconElement.style.color = "#e63946"; // Red color for PDF icon
+
+    const titleElement = document.createElement("p");
+    titleElement.textContent = certificate.title;
+
+    linkElement.appendChild(iconElement);
+    linkElement.appendChild(titleElement);
+    certificateElement.appendChild(linkElement);
+    certificatesGrid.appendChild(certificateElement);
+  });
+}
+
 // Function to set up experience toggle
 function setupExperienceToggle() {
   const toggleButtons = document.querySelectorAll(".experience-toggle-btn");
@@ -246,11 +290,22 @@ function setupThemeToggle() {
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
 
+  // Check for saved theme in localStorage
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    body.classList.add(savedTheme);
+    themeToggle.textContent =
+      savedTheme === "dark-mode" ? "Light Mode" : "Dark Mode";
+  }
+
+  // Toggle theme on button click
   themeToggle.addEventListener("click", () => {
-    body.classList.toggle("light-mode");
-    themeToggle.textContent = body.classList.contains("light-mode")
-      ? "Dark Mode"
-      : "Light Mode";
+    body.classList.toggle("dark-mode");
+    const isDarkMode = body.classList.contains("dark-mode");
+    themeToggle.textContent = isDarkMode ? "Light Text" : "Dark Text";
+
+    // Save theme preference to localStorage
+    localStorage.setItem("theme", isDarkMode ? "dark-mode" : "light-mode");
   });
 }
 
@@ -259,6 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   renderSkills();
   renderExperiences();
+  renderCertificates();
   setupBackToTop();
   setupThemeToggle();
 });

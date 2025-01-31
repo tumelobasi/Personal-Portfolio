@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
-
+    <title>Tumelo Maphalla - Portfolio</title>
     <!-- CSS Imports -->
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -22,6 +21,7 @@
       <nav id="navbar" class="nav">
         <ul class="nav-list">
           <li><a href="#welcome-section">Welcome</a></li>
+          <li><a href="#about">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -32,96 +32,55 @@
     <section id="welcome-section" class="welcome-section">
       <h1>Hi, I am Tumelo Maphalla</h1>
       <h3>Welcome to My Portfolio</h3>
+      <a href="#contact" class="btn">Let's Work Together</a>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          🎯 <strong>Driven Software Tester</strong> | Computer Science &
+          Statistics Graduate | ISTQB Certified
+        </p>
+        <p>
+          As a passionate Software Tester intern with a foundation in Computer
+          Science and Statistics, I thrive on ensuring that software systems are
+          robust, reliable, and user-friendly. With an ISTQB Foundation
+          certification, I am equipped with proven techniques to identify and
+          resolve potential defects, contributing to seamless user experiences.
+        </p>
+        <p>💡 <strong>Core Strengths:</strong></p>
+        <ul>
+          <li>
+            Crafting and executing comprehensive test cases for functional,
+            regression, and exploratory testing
+          </li>
+          <li>
+            Leveraging data-driven insights from my statistics background to
+            optimise testing strategies
+          </li>
+          <li>
+            Adept in defect tracking tools such as JIRA and agile testing
+            methodologies
+          </li>
+          <li>
+            Strong problem-solving skills with a knack for finding edge cases
+          </li>
+        </ul>
+        <p>
+          I take pride in collaborating with cross-functional teams, delivering
+          quality software, and maintaining efficient communication to ensure
+          smooth project completion.
+        </p>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
       <h2 class="projects-section-header">Here are some of my Projects</h2>
-      <div class="projects-grid">
-        <a
-          href="https://freecodecam-boilerplate-7xy4fyc2vvu.ws-eu111.gitpod.io/"
-          class="project"
-          target="_blank"
-        >
-          <img
-            class="project-image"
-            src="./sea_level_plot.png"
-            alt="Sea Level Predictor"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span> Sea Level Predictor
-            <span class="code">&gt;</span>
-          </p>
-        </a>
-        <a
-          href="https://freecodecam-boilerplate-yjjzplwmhsz.ws-eu111.gitpod.io/"
-          class="project"
-          target="_blank"
-        >
-          <img
-            class="project-image"
-            src="./bar_plot.png"
-            alt="Time Series Visualizer"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span> Time Series Visualizer
-            <span class="code">&gt;</span>
-          </p>
-        </a>
-        <a
-          href="https://freecodecam-boilerplate-5dqrp8vqgfx.ws-eu111.gitpod.io/"
-          class="project"
-          target="_blank"
-        >
-          <img
-            class="project-image"
-            src="./catplot.png"
-            alt="Medical Data Visualizer"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span> Medical Data Visualizer
-            <span class="code">&gt;</span>
-          </p>
-        </a>
-        <a
-          href="https://tumelobasi.github.io/Technical-Documentation-Page/"
-          class="project"
-          target="_blank"
-        >
-          <img
-            class="project-image"
-            src="./Screenshot 2024-05-01 052406.png"
-            alt="Technical Doc Page"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span> Technical Doc Page
-            <span class="code">&gt;</span>
-          </p>
-        </a>
-        <a
-          href="https://tumelobasi.github.io/Survey-Form/"
-          class="project"
-          target="_blank"
-        >
-          <img
-            class="project-image"
-            src="./Screenshot 2024-05-01 052406.png"
-            alt="Survey Form"
-          />
-          <p class="project-title">
-            <span class="code">&lt;</span> Survey Form
-            <span class="code">&gt;</span>
-          </p>
-        </a>
-        <a
-          href="https://www.freecodecamp.org/tumelobasi"
-          class="btn btn-show-all"
-          target="_blank"
-        >
-          <p class="project-title">
-            See more <i class="fas fa-chevron-right"></i>
-          </p>
-        </a>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Projects will be dynamically inserted here by JavaScript -->
       </div>
     </section>
 
@@ -136,6 +95,7 @@
           href="https://facebook.com/tumelo.basi.9"
           target="_blank"
           class="btn contact-details"
+          aria-label="Facebook"
         >
           <i class="fab fa-facebook-square"></i> Facebook
         </a>
@@ -144,13 +104,22 @@
           href="https://github.com/tumelobasi"
           target="_blank"
           class="btn contact-details"
+          aria-label="GitHub"
         >
           <i class="fab fa-github"></i> GitHub
         </a>
-        <a href="mailto:tumelobasi@gmail.com" class="btn contact-details">
+        <a
+          href="mailto:tumelobasi@gmail.com"
+          class="btn contact-details"
+          aria-label="Email"
+        >
           <i class="fas fa-at"></i> Send a Mail
         </a>
-        <a href="tel:+27788493610" class="btn contact-details">
+        <a
+          href="tel:+27788493610"
+          class="btn contact-details"
+          aria-label="Call Me"
+        >
           <i class="fas fa-mobile-alt"></i> Call Me
         </a>
       </div>
@@ -165,6 +134,30 @@
           >freecodecamp <i class="fab fa-free-code-camp"></i
         ></a>
       </p>
+      <div class="social-icons">
+        <a
+          href="https://linkedin.com/in/yourprofile"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="https://twitter.com/yourprofile"
+          target="_blank"
+          aria-label="Twitter"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>

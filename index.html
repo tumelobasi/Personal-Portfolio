@@ -23,19 +23,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="icon" type="image/png" href="./favicon.png" />
-    <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-XXXXXXXXXX");
-    </script>
   </head>
   <body>
     <header>
@@ -57,7 +44,6 @@
               >Certificates</a
             >
           </li>
-          <li><a href="#blog" aria-label="Blog Section">Blog</a></li>
           <li><a href="#contact" aria-label="Contact Section">Contact</a></li>
         </ul>
         <button id="theme-toggle" class="btn" aria-label="Toggle Theme">
@@ -83,12 +69,16 @@
       <section id="profile" class="profile-section">
         <div class="profile-container">
           <img
-            src="./profile-picture.jpg"
+            src="./ProfilePic/IMG_1498.jpg"
             alt="Tumelo Maphalla"
-            class="profile-picture"
+            class="profile-picture zoom-glow-effect"
+          />
+          <img
+            src="./ProfilePic/20230301_155738.jpg"
+            alt="Logo"
+            class="logo"
             loading="lazy"
           />
-          <img src="./logo.png" alt="Logo" class="logo" loading="lazy" />
         </div>
       </section>
 
@@ -138,7 +128,6 @@
       <section id="skills" class="skills-section">
         <h2>My Skills</h2>
         <div class="skills-list" id="skills-list"></div>
-        <canvas id="skillsChart" width="400" height="200"></canvas>
       </section>
 
       <!-- Projects Section -->
@@ -157,29 +146,6 @@
       <section id="certificates" class="certificates-section">
         <h2>My Certificates</h2>
         <div class="certificates-grid" id="certificates-grid"></div>
-      </section>
-
-      <!-- Blog Section -->
-      <section id="blog" class="blog-section">
-        <h2>Blog</h2>
-        <div class="blog-posts" id="blog-posts">
-          <article>
-            <h3>How I Improved Test Coverage by 30%</h3>
-            <p>
-              Learn how I used data-driven testing to improve test coverage in
-              my latest project.
-            </p>
-            <a href="#" class="btn" aria-label="Read More">Read More</a>
-          </article>
-          <article>
-            <h3>Top 5 Tools Every Tester Should Know</h3>
-            <p>
-              Discover the essential tools that can make your testing process
-              more efficient.
-            </p>
-            <a href="#" class="btn" aria-label="Read More">Read More</a>
-          </article>
-        </div>
       </section>
 
       <!-- Contact Section -->
@@ -242,32 +208,6 @@
           </button>
         </form>
       </section>
-
-      <!-- Newsletter Section -->
-      <section id="newsletter" class="newsletter-section">
-        <h2>Subscribe to My Newsletter</h2>
-        <form id="newsletter-form" class="newsletter-form">
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-            aria-label="Your Email"
-          />
-          <button type="submit" class="btn" aria-label="Subscribe">
-            Subscribe
-          </button>
-        </form>
-      </section>
-
-      <!-- Hobbies Section -->
-      <section id="hobbies" class="hobbies-section">
-        <h2>Hobbies</h2>
-        <p>
-          When I'm not testing software, I enjoy hiking, photography, and
-          playing chess.
-        </p>
-      </section>
     </main>
 
     <footer>
@@ -294,7 +234,6 @@
     </button>
 
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

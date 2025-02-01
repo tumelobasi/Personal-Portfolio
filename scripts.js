@@ -1,4 +1,3 @@
-// Arrays for dynamic content
 // Array of projects
 const projects = [
   {
@@ -273,37 +272,6 @@ function setupThemeToggle() {
     localStorage.setItem("theme", isDarkMode ? "dark-mode" : "light-mode");
   });
 }
-
-// Add this to your existing JavaScript
-// Skills Chart
-const skillsChart = new Chart(document.getElementById("skillsChart"), {
-  type: "bar",
-  data: {
-    labels: ["HTML", "CSS", "JavaScript", "Python", "JIRA", "Agile"],
-    datasets: [
-      {
-        label: "Skill Level",
-        data: [90, 85, 80, 75, 85, 90],
-        backgroundColor: "rgba(52, 152, 219, 0.6)",
-        borderColor: "rgba(52, 152, 219, 1)",
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-});
-
-// Newsletter Form Submission
-document.getElementById("newsletter-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Thank you for subscribing!");
-});
 
 // Initialize all functionality
 document.addEventListener("DOMContentLoaded", () => {

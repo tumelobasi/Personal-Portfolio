@@ -102,16 +102,104 @@ const experiences = [
 // Array of certificates (PDF format)
 const certificates = [
   {
-    file: "./Certificates/Tumelo Maphalla  VB Scripting.pdf",
+    file: "./Certificates/ISTQB/sastqb_Tumelo Maphalla_CTFL.png",
+    title: "ISTQB Foundation",
+  },
+  {
+    file: "./Certificates/iLab/Tumelo Maphalla  VB Scripting.pdf",
     title: "VB Scripting for Testers",
   },
   {
-    file: "./Certificates/Tumelo Maphalla JAVA for Testers.pdf",
+    file: "./Certificates/iLab/Tumelo Maphalla JAVA for Testers.pdf",
     title: "JAVA for Testers",
   },
   {
-    file: "./Certificates/JIRA Test Management using ZEPHYR for TESTERS Certificate.pdf",
+    file: "./Certificates/NWU/Bachelors_Certificate.pdf",
+    title: "Computer Science and Statistics",
+  },
+  {
+    file: "./Certificates/NWU/SI_Certificate.pdf",
+    title: "Student Assistant",
+  },
+  {
+    file: "./Certificates/NWU/Tutoring_Certificate .pdf",
+    title: "Tutoring",
+  },
+  {
+    file: "./Certificates/NWU/Math Olympiad Certificate .pdf",
+    title: "Math Olympiad participation",
+  },
+  {
+    file: "./Certificates/Udemy/Better Business Writing Skills Certificate.pdf",
+    title: "Better Business Writing Skills",
+  },
+  {
+    file: "./Certificates/Udemy/Business Etiquette 101- Social Skills for Success Certificate.pdf",
+    title: "Business Etiquette 101- Social Skills for Success",
+  },
+  {
+    file: "./Certificates/Udemy/Business Skills- Email Etiquette Rules Everyone Should Know.pdf",
+    title: "Business Skills- Email Etiquette Rules",
+  },
+  {
+    file: "./Certificates/Udemy/Business Writing & Technical Writing Immersion Certification.pdf",
+    title: "Business Writing & Technical Writing Immersion",
+  },
+  {
+    file: "./Certificates/Udemy/Conflict Management with Emotional Intelligence Certificate.pdf",
+    title: "Conflict Management with Emotional Intelligence",
+  },
+  {
+    file: "./Certificates/Udemy/Consulting Approach to Problem Solving Certification.pdf",
+    title: "Consulting Approach to Problem Solving",
+  },
+  {
+    file: "./Certificates/Udemy/Emotional Intelligence at Work Certificate.pdf",
+    title: "Emotional Intelligence at Work",
+  },
+  {
+    file: "./Certificates/Udemy/Fundamentals of Business Analysis Certificate.pdf",
+    title: "Fundamentals of Business Analysis",
+  },
+  {
+    file: "./Certificates/Udemy/Jenkins, From Zero To Hero Become a DevOps Jenkins Master Certificate.pdf",
+    title: "Jenkins, From Zero To Hero Become a DevOps Jenkins Master",
+  },
+  {
+    file: "./Certificates/Udemy/JIRA Test Management using ZEPHYR for TESTERS Certificate.pdf",
     title: "JIRA Test Management using ZEPHYR for TESTERS",
+  },
+  {
+    file: "./Certificates/Udemy/Learn Risk Analysis, Evaluation & Assessment - from A to Z.pdf",
+    title: "Learn Risk Analysis, Evaluation & Assessment",
+  },
+  {
+    file: "./Certificates/Udemy/Mobile Automation Appium Cucumber for Android&iOS + Jenkins Certificate.pdf",
+    title: "Mobile Automation Appium Cucumber for Android&iOS + Jenkins",
+  },
+  {
+    file: "./Certificates/Udemy/Performance Testing using LoadRunner Certificate.pdf",
+    title: "Performance Testing using LoadRunner",
+  },
+  {
+    file: "./Certificates/Udemy/Soft Skills The Complete Guide to Become a Respected Leader Certificate.pdf",
+    title: "Soft Skills The Complete Guide to Become a Respected Leader",
+  },
+  {
+    file: "./Certificates/Udemy/The Agile Samuarai Bootcamp Certificate.pdf",
+    title: "The Agile Samuarai Bootcamp",
+  },
+  {
+    file: "./Certificates/Udemy/The Complete JavaScript Course 2024 -From Zero to Expert Certificate.pdf",
+    title: "JavaScript Course 2024",
+  },
+  {
+    file: "./Certificates/Udemy/The Complete SQL Bootcamp - Go from Zero to Hero Certificate.pdf",
+    title: "The Complete SQL Bootcamp - Go from Zero to Hero",
+  },
+  {
+    file: "./Certificates/Udemy/The Git and Github Bootcamp Certificate.pdf",
+    title: "The Git and Github Bootcamp",
   },
 ];
 
@@ -255,24 +343,6 @@ function setupBackToTop() {
   });
 }
 
-// Theme Toggle
-function setupThemeToggle() {
-  const themeToggle = document.getElementById("theme-toggle");
-  const body = document.body;
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    body.classList.add(savedTheme);
-    themeToggle.textContent =
-      savedTheme === "dark-mode" ? "Light Mode" : "Dark Mode";
-  }
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    const isDarkMode = body.classList.contains("dark-mode");
-    themeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
-    localStorage.setItem("theme", isDarkMode ? "dark-mode" : "light-mode");
-  });
-}
-
 // Initialize all functionality
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
@@ -280,5 +350,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderExperiences();
   renderCertificates();
   setupBackToTop();
-  setupThemeToggle();
 });
